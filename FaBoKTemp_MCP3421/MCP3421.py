@@ -68,14 +68,14 @@ class MCP3421:
         for addr in SLAVE_ADDRESS:
             try:
                 test = bus.read_byte_data(addr, 0x00)
-                print "Device Addres:",  hex(addr)
-                print
+                print("Device Addres:",  hex(addr))
+                print()
                 return addr
 
             except:
                 pass
 
-        print "MCP3421 Not Found!!"
+        print("MCP3421 Not Found!!")
         exit()
 
     ## Configure Device
